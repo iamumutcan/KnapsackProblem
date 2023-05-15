@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class KnapsackReader2 {
+public class DynamicProgramming {
     public static void main(String[] args) throws FileNotFoundException {
 
 
@@ -12,7 +12,7 @@ public class KnapsackReader2 {
         int maxWeight;
         int maxValues;
 
-        File dosya = new File("src/ks_19_0");
+        File dosya = new File("src/ks_4_0");
         Scanner scanner = new Scanner(dosya);
         String sutun = scanner.nextLine();
         String[] baslik = sutun.split(" ");
@@ -44,8 +44,6 @@ public class KnapsackReader2 {
         int n = values.length;
         int[][] dp = new int[n+1][maxWeight+1];
         boolean[][] included = new boolean[n+1][maxWeight+1];
-        KnapsackReader knapsackReader = new KnapsackReader();
-
 
         // Build table in bottom up manner
         for (int i = 0; i <= n; i++) {

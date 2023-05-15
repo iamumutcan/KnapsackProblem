@@ -8,7 +8,6 @@ public class Main {
         int n = values.length;
         int[][] dp = new int[n+1][maxWeight+1];
         boolean[][] included = new boolean[n+1][maxWeight+1];
-        KnapsackReader knapsackReader = new KnapsackReader();
 
 
         // Build table in bottom up manner
